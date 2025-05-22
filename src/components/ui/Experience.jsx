@@ -4,21 +4,23 @@ const Experience = () => {
   return (
     <div>
       <p className="text-sm text-gray-400 uppercase tracking-wide mb-1 text-center my-10">
-        What Others Say
+        What I HAVE DONE
       </p>
-      <h1 className="text-4xl font-extrabold mb-12 text-center">
-        Testimonials.
-      </h1>
-      <div className="relative max-w-6xl mx-auto py-12 px-4">
-        <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 w-1 bg-gray-300"></div>
+      <h1 className="text-4xl font-extrabold mb-12 text-center">Experience</h1>
 
-        <div className="mb-12 flex justify-between items-center w-full">
-          <div className="w-5/12 text-start">
+      <div className="relative max-w-6xl mx-auto py-12 px-4">
+        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 w-1 bg-gray-300"></div>
+
+        <div className="mb-12 flex flex-col lg:flex-row justify-between items-center w-full gap-8">
+          <div className="lg:w-5/12 w-full">
             <div className="bg-[#1f1f1f] text-white p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-bold">MERN Internee</h3>
               <p className="text-sm text-[#F59E0B]">
-                {" "}
-                <a href="https://ideoversity.com/ " target="_blank">
+                <a
+                  href="https://ideoversity.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Ideoversity, ARFA TOWER
                 </a>
               </p>
@@ -32,21 +34,18 @@ const Experience = () => {
                   Axios.
                 </li>
                 <li>
-                  Build scalable RESTful APIs and handle server-side logic.
+                  Built scalable RESTful APIs and handled server-side logic.
                 </li>
                 <li>
-                  Used Git and GitHub for version control, code collaboration,
-                  and project management.
+                  Used Git and GitHub for version control and collaboration.
                 </li>
               </ul>
             </div>
           </div>
-          <div className="w-2/12" />
         </div>
 
-        <div className="mb-12 flex justify-between items-center w-full">
-          <div className="w-2/12" />
-          <div className="w-5/12 text-left">
+        <div className="mb-12 flex flex-col lg:flex-row-reverse justify-between items-center w-full gap-8">
+          <div className="lg:w-5/12 w-full">
             <div className="bg-[#1f1f1f] text-white p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-bold">Frontend Developer Intern</h3>
               <p className="text-sm text-[#F59E0B]">CodeLab</p>
@@ -62,13 +61,18 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="mb-12 flex justify-between items-center w-full">
-          <div className="w-5/12 text-start">
+        <div className="mb-12 flex flex-col lg:flex-row justify-between items-center w-full gap-8">
+          <div className="lg:w-5/12 w-full">
             <div className="bg-[#1f1f1f] text-white p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-bold">Graphic Designer Intern</h3>
               <p className="text-sm text-[#F59E0B]">
-                {" "}
-                <a href="https://hadielearning.com/">Hadi-e-learning</a>
+                <a
+                  href="https://hadielearning.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Hadi-e-learning
+                </a>
               </p>
               <p className="text-xs text-gray-400 mb-3">
                 April 2024 – June 2024
@@ -76,7 +80,7 @@ const Experience = () => {
               <ul className="list-disc list-outside pl-4 text-sm text-gray-200">
                 <li>
                   Created digital designs for social media, websites, and
-                  marketing campaigns
+                  marketing campaigns.
                 </li>
                 <li>
                   Designed logos, brochures, and brand materials using Adobe
@@ -87,13 +91,11 @@ const Experience = () => {
                   assets.
                 </li>
                 <li>
-                  Worked closely with clients and teams to deliver creative
-                  solutions on time.
+                  Collaborated with teams to deliver creative solutions on time.
                 </li>
               </ul>
             </div>
           </div>
-          <div className="w-2/12" />
         </div>
       </div>
     </div>

@@ -3,13 +3,15 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[90vh] bg-black text-white flex items-center justify-center px-4">
+    <div className="py-10 md:py-20 lg:py-26 bg-black text-white flex items-center justify-center px-4 ">
       <div className="max-w-3xl text-center">
         <h2 className="text-[#F59E0B] text-2xl mb-3">Hey there!, I'm-</h2>
 
-        <h1 className="text-8xl font-extrabold text-white mb-6">Aman Fatima</h1>
+        <h1 className="text-6xl md:text-8xl lg:text-8xl font-bold text-white mb-6 ">
+          Aman Fatima
+        </h1>
 
-        <p className="text-white text-xl mb-3">
+        <p className="text-white text-md md:text-xl lg:text-xl mb-3">
           A proactive MERN Stack developer with over 2+ years of experience,
           passionate about creating dynamic web experiences. From frontend to
           backend, I thrive on solving problems with clean, efficient code.
