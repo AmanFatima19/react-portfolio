@@ -15,7 +15,7 @@ const projects = [
       "ecommerce",
       "daisyUI",
     ],
-    image: "baroque-ecommerce.png",
+    image: "baroque-project.png",
     github: "https://github.com/yourusername/baroque-ecommerce",
   },
   {
