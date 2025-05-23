@@ -8,7 +8,7 @@ const ContactForm = () => {
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 text-center">
           Contact.
         </h2>
-        <form className="space-y-5">
+        <form className="space-y-2 md:space-y-6 lg:space-y-6">
           <div>
             <label className="block text-sm font-semibold mb-1">
               Your Name
