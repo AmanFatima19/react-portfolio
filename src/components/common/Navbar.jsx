@@ -22,7 +22,7 @@ const Navbar = () => {
             About
           </Link>
           <Link
-            to="/work"
+            to="/projects"
             className="hover:text-[#F59E0B]  transition duration-300"
           >
             Work

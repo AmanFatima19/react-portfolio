@@ -6,10 +6,10 @@ const AboutSection = () => {
     <div className="max-w-3xl mx-auto px-4 py-12 text-center">
       <h1 className="text-4xl font-bold mb-6">About Me</h1>
 
-      <p className="text-md leading-relaxed mb-6">
+      <p className="text-md leading-relaxed">
         I'm a passionate MERN stack developer specializing in building robust,
         scalable web applications. With expertise in{" "}
-        <span className="font-semibold text-[#3668d4]">
+        <span className="font-semibold text-[#F59E0B]">
           MongoDB, Express.js, React, and Node.js
         </span>
         , I transform ideas into seamless digital experiences.
