@@ -23,7 +23,7 @@ const projects = [
     title: "PawFinds",
     description:
       "A pet adoption platform that helps users find and adopt pets. Features include pet listings, search filters, and adoption requests.",
-    tags: ["react", "nodejs", "mongodb", "tailwind"],
+    tags: ["react","tailwind", "daisyUI","CSS","react-toast"],
     image: "paw-finds.png",
     github: "https://github.com/AmanFatima19/paw-finds",
   },
@@ -31,7 +31,7 @@ const projects = [
     title: "PakCarry",
     description:
       "A peer-to-peer logistics platform connecting travelers with people needing to send packages across Pakistan. Features real-time matching and secure payments.",
-    tags: ["react", "mongodb", "tailwind", "firebase"],
+    tags: ["react", "mongodb", "tailwindCSS", "nodemailer","admin-dashboard","node"],
     image: "pak-carry-proj.png",
     github: "https://github.com/AmanFatima19/pak-carry",
   },
@@ -77,7 +77,7 @@ const ProjectCard = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="rounded-lg max-w-full max-h-60 object-cover"
+                  className="rounded-lg max-w-full h-45 object-cover"
                 />
                 <a
                   href={project.github}

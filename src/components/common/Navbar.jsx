@@ -15,6 +15,12 @@ const Navbar = () => {
         </Link>
 
         <nav className="flex space-x-10 text-base">
+           <Link
+            to="/"
+            className="hover:text-[#F59E0B] transition duration-300"
+          >
+            Home
+          </Link>
           <Link
             to="/about"
             className="hover:text-[#F59E0B] transition duration-300"
