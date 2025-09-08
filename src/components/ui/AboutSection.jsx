@@ -9,7 +9,7 @@ const AboutSection = () => {
       <p className="text-md leading-relaxed mb-6">
         I'm a passionate MERN stack developer specializing in building robust,
         scalable web applications. With expertise in{" "}
-        <span className="font-semibold text-[#F59E0B]">
+        <span className="font-semibold text-[#3668d4]">
           MongoDB, Express.js, React, and Node.js
         </span>
         , I transform ideas into seamless digital experiences.

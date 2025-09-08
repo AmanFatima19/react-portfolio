@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import useInView from "../../hooks/useInView";
 
 const projects = [
   {
@@ -37,47 +38,74 @@ const projects = [
 ];
 
 const ProjectCard = () => {
+  const [leftRef, leftInView] = useInView({ threshold: 0.1 });
+  const [rightRef, rightInView] = useInView({ threshold: 0.1 });
+
   return (
-    <section className="py-12 w-[85%] mx-auto">
+    <section className="py-8 max-w-6xl mx-auto px-4 sm:py-10 md:py-12 animate-fade-in overflow-x-hidden">
       <h1 className="text-4xl font-bold my-4 text-center">My Projects</h1>
 
       <div className="grid md:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-[#1f1f1f] p-6 rounded-2xl shadow-lg transform transition my-8 duration-300 hover:scale-105 hover:shadow-xl relative"
-          >
-            <div className="relative">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-lg w-full h-50 object-cover"
-              />
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 bg-[#be882b] p-3 rounded-full text-white hover:bg-[#F59E0B] transition-all duration-300"
-              >
-                <FaGithub size={20} />
-              </a>
-            </div>
-            <h3 className="text-xl font-bold text-white mt-4">
-              {project.title}
-            </h3>
-            <p className="text-gray-300 mt-2 text-sm">{project.description}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {project.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="text-xs bg-gray-700 text-amber-500 px-2 py-1 rounded-full"
+        {projects.map((project, index) => {
+          let animationClass = "";
+          if (index === 0) {
+            animationClass = leftInView
+              ? "translate-x-0 opacity-100 transition-transform duration-700"
+              : "-translate-x-20 opacity-0";
+          } else if (index === projects.length - 1) {
+            animationClass = rightInView
+              ? "translate-x-0 opacity-100 transition-transform duration-700"
+              : "translate-x-20 opacity-0";
+          } else {
+            animationClass = "opacity-100";
+          }
+
+          return (
+            <div
+              key={index}
+              ref={index === 0 ? leftRef : index === projects.length - 1 ? rightRef : null}
+              className={`bg-[#1f1f1f] p-6 rounded-2xl shadow-lg transform transition my-4 duration-300 hover:scale-105 hover:shadow-xl relative ${animationClass} ${
+                project.title === "PawFinds" ? "cursor-pointer" : ""
+              }`}
+              onClick={() => {
+                if (project.title === "PawFinds") {
+                  window.open("https://paw-finds.vercel.app/", "_blank");
+                }
+              }}
+            >
+              <div className="relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="rounded-lg max-w-full max-h-60 object-cover"
+                />
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-2 right-2 bg-[#be882b] p-3 rounded-full text-white hover:bg-[#3668d4] transition-all duration-300"
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  #{tag}
-                </span>
-              ))}
+                  <FaGithub size={20} />
+                </a>
+              </div>
+              <h3 className="text-xl font-bold text-white mt-4">
+                {project.title}
+              </h3>
+              <p className="text-gray-300 mt-2 text-sm">{project.description}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="text-xs bg-gray-700 text-amber-500 px-2 py-1 rounded-full"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

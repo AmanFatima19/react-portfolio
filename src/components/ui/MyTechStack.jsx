@@ -49,7 +49,7 @@ const techStack = [
 
 const MyTechStack = () => {
   return (
-    <div className="bg-black text-white py-10 px-6 text-center">
+    <div className="bg-black text-white py-8 sm:py-10 md:px-8 lg:px-12 xl:px-16 text-center animate-fade-in">
       <h1 className="text-4xl font-bold my-4">My Tech Stack</h1>
       <div className="w-[75%] mx-auto flex flex-wrap justify-center gap-4 mt-8 max-w-6xl mx-auto">
         {techStack.map((tech, idx) => (
