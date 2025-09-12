@@ -70,6 +70,8 @@ const ProjectCard = () => {
               onClick={() => {
                 if (project.title === "PawFinds") {
                   window.open("https://paw-finds.vercel.app/", "_blank");
+                } else if (project.title === "PakCarry") {
+                  window.open("https://pak-carry.vercel.app/", "_blank");
                 }
               }}
             >
@@ -83,7 +85,7 @@ const ProjectCard = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute top-2 right-2 bg-[#be882b] p-3 rounded-full text-white hover:bg-[#3668d4] transition-all duration-300"
+                  className="absolute top-2 right-2 bg-[#be882b] p-3 rounded-full text-white hover:bg-gray-600 transition-all duration-300"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <FaGithub size={20} />

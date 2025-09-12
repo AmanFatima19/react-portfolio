@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <header className="bg-[#1f1f1f] text-white body-font shadow-md">
-      <div className="container mx-auto flex flex-wrap items-center justify-between px-4 md:px-16 py-4">
+      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4 md:px-6 py-4 overflow-x-hidden box-border max-w-full">
         <Link to="/" className="flex items-center space-x-2">
           <div className="bg-[#F59E0B] rounded-full w-8 h-8 flex items-center justify-center text-white font-bold text-lg">
             H
@@ -20,7 +20,6 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Hamburger Menu Button */}
         <button
           className="md:hidden text-white focus:outline-none"
           onClick={toggleMenu}
@@ -41,7 +40,6 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-10 text-base">
           <Link
             to="/"
@@ -69,7 +67,6 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <nav className="md:hidden w-full mt-4">
             <div className="flex flex-col space-y-4 text-base">
